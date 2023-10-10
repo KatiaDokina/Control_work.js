@@ -23,10 +23,10 @@ url.searchParams.forEach(value => {
 // 8 Нижчє інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
 
 
-let userId = url.userId;
+let id = url.id;
 
 let urlDetailsPost = new URL('https://jsonplaceholder.typicode.com/comments');
-urlDetailsPost.searchParams.set('postId', userId);
+urlDetailsPost.searchParams.set('postId', id);
 fetch(urlDetailsPost)
     .then(value => value.json())
     .then((postDetails) => {
